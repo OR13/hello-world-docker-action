@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  hello-world-docker-action:
+    image: or13/hello-world-docker-action
+    build:
+      context: .
+      dockerfile: Dockerfile

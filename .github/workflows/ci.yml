@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: or13/hello-world-docker-action@v1
+        uses: ./
         with:
           who-to-greet: "Mona the Octocat"
 
