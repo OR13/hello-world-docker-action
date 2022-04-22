@@ -1,16 +1,17 @@
-# action.yml
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "YAML file linter"
+description: "Lint a YAML file in your project"
+author: "Jacob Tomlinson"
 inputs:
-  who-to-greet: # id of input
-    description: "Who to greet"
+  path:
+    description: "Path to the YAML file to be linted"
     required: true
-    default: "World"
+  strict:
+    description: "Run the linter in strict mode (error on warnings)"
+    required: false
+    default: false
 outputs:
-  time: # id of output
-    description: "The time we greeted you"
+  warnings:
+    description: "Number of warnings raised if lint was successful"
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.who-to-greet }}
