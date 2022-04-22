@@ -6,6 +6,7 @@ from yamllint.config import YamlLintConfig
 
 
 def main():
+    print(os.environ)
     yaml_path = os.environ["INPUT_PATH"]
     strict = os.environ["INPUT_STRICT"] == "true"
     conf = YamlLintConfig("extends: default")

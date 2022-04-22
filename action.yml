@@ -9,6 +9,8 @@ inputs:
     description: "Run the linter in strict mode (error on warnings)"
     required: false
     default: false
+  bar-baz:
+    description: "asdfasdfa"
 outputs:
   warnings:
     description: "Number of warnings raised if lint was successful"
