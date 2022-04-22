@@ -10,6 +10,7 @@ jobs:
         uses: or13/hello-world-docker-action@main
         with:
           path: "tests/valid.yaml"
+          bar-baz: "booooooo"
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.warnings }}" == "1"
